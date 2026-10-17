@@ -15,23 +15,18 @@ public class Actor extends Person {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
+        if (!super.equals(obj)) {
             return false;
         }
         Actor other = (Actor) obj;
-        return height == other.height && Objects.equals(name, other.name) && Objects.equals(surname, other.surname);
+        return height == other.height;
     }
-
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, height);
+        return Objects.hash(super.hashCode(), height);
     }
-
     @Override
     public String toString() {
-        return name + " " + surname + " (" + height + ")";
+        return super.toString() + " (" + height + ")";
     }
 }

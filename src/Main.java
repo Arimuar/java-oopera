@@ -9,8 +9,8 @@ public class Main {
         Director director1 = new Director("Кристофер", "Нолан", Gender.MALE, 14);
         Director director2 = new Director("Дени", "Вильнёв", Gender.MALE, 17);
 
-        String musicAuthor = "Ханс Циммер";
-        String choreographer = "Иржи Килиан";
+        Person musicAuthor = new Person("Ханс", "Циммер", Gender.MALE);
+        Person choreographer = new Person("Иржи", "Килиан", Gender.MALE);
 
         Show drama = new Show("Сато",
                 150,
